@@ -48,6 +48,10 @@ appendRowBtn.addEventListener('click', () => {
 });
 
 removeRowBtn.addEventListener('click', () => {
+  if (rows <= 2) {
+    return;
+  }
+
   rows--;
   renderTable();
   updateButtons();
@@ -64,6 +68,10 @@ appendColBtn.addEventListener('click', () => {
 });
 
 removeColBtn.addEventListener('click', () => {
+  if (cols <= 2) {
+    return;
+  }
+
   cols--;
   renderTable();
   updateButtons();
